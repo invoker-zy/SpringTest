@@ -5,6 +5,13 @@
 
 	<!-- 配置Bean -->
 	<bean id="helloWorld" class="com.example.demo.entity.HelloWorld">
+		<!-- 属性注入 -->
 		<property name="name" value="Spring"></property>
+	</bean>
+	<!-- 通过构造方法配置bean的属性 -->
+	<bean id="car" class="com.example.demo.entity.Car">
+		<constructor-arg value="Audi"></constructor-arg>
+		<constructor-arg value="Germany"></constructor-arg>
+		<constructor-arg value="1111"></constructor-arg>
 	</bean>
 </beans>

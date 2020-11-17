@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.example.demo.entity.Car;
 import com.example.demo.entity.HelloWorld;
 
 public class TestDemo {
@@ -13,7 +14,9 @@ public class TestDemo {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 		//2.从IOC容器中获取Bean实例
 		HelloWorld helloWorld = (HelloWorld) ctx.getBean("helloWorld");
+//		Car car = (Car) ctx.getBean("car");
 		//3.调用实例中的hello方法
 		helloWorld.hello();
+//		car.toString();
 	}
 }
